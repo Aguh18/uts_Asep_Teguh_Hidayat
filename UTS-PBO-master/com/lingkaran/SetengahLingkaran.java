@@ -1,25 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.lingkaran;
 
-/**
- *
- * @author user
- */
+
 public class SetengahLingkaran implements Lingkaran{
     
     double hasil;
     public SetengahLingkaran(){
         hasil = 0;
     }
+    
     @Override
     public void hitungLuas() {
-        hasil = (panjang * lebar) * (Math.PI * lebar * lebar);
+        double luas1 = (PANJANG / 2 * LEBAR) - (Math.PI * (PANJANG / 2) * (PANJANG / 2) / 4);
+        
+        hasil = 2 * luas1;
+    }
+    
+    @Override
+    public void tampilkanLuas() {
+        System.out.println("luas nya adalah : " + this.getHasil());
     }
     
     public double getHasil(){
         return hasil;
     }
+
+    
 }
